@@ -12,7 +12,7 @@
 /* Header Navigation */
 .header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   gap: 10px;
   margin-bottom: 20px;
   flex-wrap: wrap; /* Ensures buttons wrap on small screens */

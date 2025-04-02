@@ -144,7 +144,7 @@ const MyEventList = () => {
     <div className="event-table-container">
       <div className="header">
         <h2>My Events</h2>
-        <button
+        <div
           className="create-event-btn"
           onClick={() => {
             setShowModal(true);
@@ -152,7 +152,7 @@ const MyEventList = () => {
           }}
         >
           <FaPlus className="icon" /> Create Event
-        </button>
+        </div>
       </div>
 
       {loading ? (
