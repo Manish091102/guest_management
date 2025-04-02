@@ -5,6 +5,7 @@ import LoginForm from "./components/LoginForm";
 import OtpVerification from "./components/OtpVerification";
 import { registerVerify } from "./features/authSlice";
 import { useDispatch } from "react-redux";
+import "./App.css"
 import { useNavigate } from "react-router-dom";
 
 const App = () => {
