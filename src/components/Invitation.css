@@ -1,0 +1,75 @@
+/* Fullscreen container */
+.invitation-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fa;
+    overflow: hidden; /* Prevent scrolling */
+    margin: 0;
+  }
+  
+  /* Invitation card */
+  .invitation-card {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+  }
+  
+  /* Title */
+  .invitation-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  /* Message & text */
+  .invitation-text {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .invitation-message {
+    font-size: 18px;
+    font-weight: bold;
+    color: #28a745;
+  }
+  
+  /* Button container */
+  .invitation-button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  /* Accept & Reject buttons */
+  .accept-button, .reject-button {
+    padding: 10px 20px;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .accept-button {
+    background-color: #28a745;
+  }
+  
+  .reject-button {
+    background-color: #dc3545;
+  }
+  
+  /* Prevent scrolling on body */
+  body, html {
+    margin: 0;
+    overflow: hidden;
+  }
+  

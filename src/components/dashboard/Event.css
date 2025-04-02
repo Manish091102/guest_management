@@ -1,0 +1,135 @@
+/* Container */
+.event-table-container {
+    padding: 15px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 900px;
+    margin: 20px auto 0 auto; /* Add margin to push it down only slightly */
+}
+
+/* Remove extra top margin on h2 */
+.event-table-container h2 {
+    margin: 10px 0; /* Reduce top space */
+    text-align: center;
+    color: #333;
+}
+
+/* Table */
+.event-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px; /* Reduce space */
+}
+
+/* Table Header */
+.event-table th {
+    background: #2c3e50;
+    color: white;
+    padding: 10px;
+    text-align: left;
+    font-weight: bold;
+}
+
+/* Table Data */
+.event-table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Alternating Row Colors */
+.event-table tbody tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+/* Hover Effect */
+.event-table tbody tr:hover {
+    background: #ecf0f1;
+    cursor: pointer;
+}
+
+/* Loading & No Events Text */
+.loading-text, .no-events {
+    text-align: center;
+    font-size: 16px;
+    color: #777;
+    padding: 10px; /* Reduce padding */
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.create-event-btn {
+    background: #3498db;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+.create-event-btn:hover {
+    background: #2980b9;
+}
+
+/* Action Buttons */
+.update-btn {
+    background: #f1c40f;
+    color: black;
+    border: none;
+    padding: 5px 10px;
+    margin-right: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.update-btn:hover {
+    background: #d4ac0d;
+}
+
+.delete-btn {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.delete-btn:hover {
+    background: #c0392b;
+}
+
+
+/* Responsive Table */
+@media (max-width: 768px) {
+    .event-table-container {
+        padding: 10px;
+    }
+
+    .event-table th, .event-table td {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .event-table-container {
+        padding: 5px;
+    }
+
+    .event-table th, .event-table td {
+        font-size: 12px;
+        padding: 6px;
+    }
+}

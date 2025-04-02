@@ -1,0 +1,280 @@
+/* Container */
+.event-table-container {
+    padding: 15px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 900px;
+    margin: 20px auto 0 auto;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.create-event-btn {
+    background: #28a745;
+    width:20%;
+    color: white;
+    padding: 8px 16px;  /* Slightly increase padding */
+    border: none;
+    border-radius: 6px; /* More rounded corners */
+    cursor: pointer;
+    font-size: 14px;  /* Slightly increase font size */
+    font-weight: bold;
+    transition: background 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;  /* Adjust spacing between icon and text */
+}
+
+.create-event-btn .icon {
+    font-size: 14px; /* Slightly increase icon size */
+}
+
+.create-event-btn:hover {
+    background: #218838;
+}
+
+
+
+/* Table */
+.event-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+/* Table Header */
+.event-table th {
+    background: #2c3e50;
+    color: white;
+    padding: 12px;
+    text-align: left;
+    font-weight: bold;
+}
+
+/* Table Data */
+.event-table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Alternating Row Colors */
+.event-table tbody tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+/* Hover Effect */
+.event-table tbody tr:hover {
+    background: #ecf0f1;
+    cursor: pointer;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.update-btn {
+    background: #ffc107;
+    color: black;
+    border: none;
+    padding: 7px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: background 0.3s ease;
+}
+
+.update-btn:hover {
+    background: #e0a800;
+}
+
+.delete-btn {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 7px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: background 0.3s ease;
+}
+
+.delete-btn:hover {
+    background: #c82333;
+}
+
+.update-btn .icon, .delete-btn .icon {
+    font-size: 14px;
+}
+
+.invitation-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .invitation-table th,
+  .invitation-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  .invitation-table th {
+    background-color: #f4f4f4;
+  }
+  
+  .status {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+  
+  .status.pending {
+    background-color: yellow;
+    color: black;
+  }
+  
+  .status.accepted {
+    background-color: green;
+    color: white;
+  }
+  
+  .status.rejected {
+    background-color: red;
+    color: white;
+  }
+  
+
+/* Modal Overlay */
+/* Modal Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal Content */
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Modal Header */
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.close-icon {
+    cursor: pointer;
+    font-size: 20px;
+    color: red;
+}
+
+/* Form */
+.event-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Form Group */
+.form-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form-group label {
+    font-weight: bold;
+    width: 40%;
+}
+
+.form-group input {
+    width: 55%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Submit Button */
+.submit-btn {
+    background: #28a745;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background: #218838;
+}
+
+
+
+/* Responsive Table */
+@media (max-width: 768px) {
+    .event-table-container {
+        padding: 10px;
+    }
+
+    .event-table th, .event-table td {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+    }
+
+    .update-btn, .delete-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .event-table-container {
+        padding: 5px;
+    }
+
+    .event-table th, .event-table td {
+        font-size: 12px;
+        padding: 8px;
+    }
+}
