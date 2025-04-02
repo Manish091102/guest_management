@@ -3,20 +3,22 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: center; /* Center vertically */
   min-height: 100vh;
   background: #f0f2f5;
   padding: 20px;
+  width: 100%;
 }
 
 /* Header Navigation */
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   gap: 10px;
   margin-bottom: 20px;
-  flex-wrap: wrap; /* Ensures buttons wrap on small screens */
+  flex-wrap: wrap;
   width: 100%;
+  max-width: 400px;
 }
 
 .header button {
@@ -29,8 +31,8 @@
   font-weight: bold;
   cursor: pointer;
   transition: 0.3s;
-  flex: 1; /* Makes buttons flexible */
-  min-width: 120px; /* Ensures they don’t shrink too much */
+  flex: 1;
+  min-width: 120px;
 }
 
 .header button.active {
@@ -48,10 +50,14 @@
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   width: 100%;
-  max-width: 400px;
+  max-width: 400px; /* Limit width on larger screens */
   display: flex;
   flex-direction: column;
   gap: 15px;
+  margin: auto; /* Center horizontally */
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%); /* Center vertically */
 }
 
 /* Input Fields */
@@ -81,25 +87,28 @@
 }
 
 /* Responsive Design */
-@media (max-width: 480px) {
+@media (max-width: 576px) {
   .app {
     padding: 10px;
-    justify-content: flex-start; /* Align content better on mobile */
+    justify-content: center; /* Ensure content is centered */
   }
 
   .header {
-    flex-direction: row;
-    justify-content: center;
-    gap: 5px;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
   }
 
   .header button {
-    font-size: 0.9rem;
-    padding: 10px 15px;
+    font-size: 1rem;
+    padding: 12px 20px;
+    width: 100%;
   }
 
   .auth-container {
-    width: 90%;
+    width: 90%; /* Almost full width for mobile */
     padding: 20px;
+    top: 50%;
+    transform: translateY(-50%);
   }
 }

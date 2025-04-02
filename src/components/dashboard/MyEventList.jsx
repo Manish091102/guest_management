@@ -141,6 +141,7 @@ const MyEventList = () => {
   
 
   return (
+    <>
     <div className="event-table-container">
       <div className="header">
         <h2>My Events</h2>
@@ -356,6 +357,7 @@ const MyEventList = () => {
         </div>
       )}
     </div>
+    </>
   );
 };
 

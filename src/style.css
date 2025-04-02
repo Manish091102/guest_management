@@ -58,3 +58,27 @@ body {
     margin-bottom: 1rem;
   }
   
+
+  @media (max-width: 576px) {
+    body {
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    .form-container {
+        width: 80%; /* Almost full width for small screens */
+        padding: 1.5rem; /* Reduce padding to save space */
+    }
+
+    button {
+        padding: 0.9rem; /* Slightly smaller button */
+    }
+
+    label {
+      font-size: 0.775rem; /* Smaller font for mobile (14px) */
+  }
+
+}

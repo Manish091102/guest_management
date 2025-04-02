@@ -187,6 +187,21 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
+.invite-btn{
+    background: #10d61a;
+    color: black;
+    border: none;
+    padding: 7px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: background 0.3s ease;
+}
+
 /* Modal Header */
 .modal-header {
     display: flex;

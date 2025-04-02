@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaCalendarAlt, FaSignOutAlt, FaUser } from "react-icons/fa";
+import { FaBars, FaCalendarAlt, FaSignOutAlt, FaUser } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import "./AdminDashboard.css";
 import MyEventList from "./dashboard/MyEventList";
@@ -7,6 +7,7 @@ import AllEventList from "./dashboard/AllEventList";
 
 const AdminDashboard = () => {
   const [activeTab, setActiveTab] = useState("all");
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   const navigate = useNavigate();
 
   const handleLogout = () => {
@@ -14,21 +15,23 @@ const AdminDashboard = () => {
     navigate("/");
   };
 
-
   return (
     <div className="admin-dashboard">
+      {/* Hamburger Menu for Mobile */}
+      <FaBars className="hamburger" onClick={() => setSidebarOpen(!sidebarOpen)} />
+
       {/* Sidebar */}
-      <aside className="sidebar">
-        <h2 className="logo">Event Management</h2>
+      <aside className={`sidebar ${sidebarOpen ? "open" : ""}`}>
+        <h2 className="logo">Events Manage</h2>
         <ul className="menu">
           <li className={activeTab === "all" ? "active" : ""} onClick={() => setActiveTab("all")}>
-            <FaCalendarAlt className="icon" /> All Events
+            <FaCalendarAlt className="icon" /> <span>All Events</span>
           </li>
           <li className={activeTab === "my" ? "active" : ""} onClick={() => setActiveTab("my")}>
-            <FaUser className="icon" /> My Events
+            <FaUser className="icon" /> <span>My Events</span>
           </li>
           <li className="logout" onClick={handleLogout}>
-            <FaSignOutAlt className="icon" /> Logout
+            <FaSignOutAlt className="icon" /> <span>Logout</span>
           </li>
         </ul>
       </aside>
