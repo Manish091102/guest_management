@@ -9,7 +9,7 @@ import "./App.css"
 import { useNavigate } from "react-router-dom";
 
 const App = () => {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch() 
   const navigate = useNavigate();
   const [isLogin, setIsLogin] = useState(false);
   const [showOtpScreen, setShowOtpScreen] = useState(false);
